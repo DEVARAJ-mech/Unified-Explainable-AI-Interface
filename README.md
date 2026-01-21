@@ -34,7 +34,7 @@ streamlit run app.py
 
 Fill this section before submission:
 
-- **TD group:** (e.g., CDOF1)
+- **TD group:** DIA 1
 - **Members:**
   - Devaraj RAMAMOORTHY
   - Rubesh PRABAKARAN
