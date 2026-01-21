@@ -1,0 +1,10 @@
+streamlit>=1.28
+tensorflow>=2.12
+numpy
+pillow
+matplotlib
+librosa
+opencv-python
+lime
+scikit-image
+shap
