@@ -36,18 +36,19 @@ Fill this section before submission:
 
 - **TD group:** (e.g., CDOF1)
 - **Members:**
-  - Name 1
-  - Name 2
-  - ...
+  - Devaraj RAMAMOORTHY
+  - Rubesh PRABAKARAN
 
 ---
 
 ## What was refactored
 
 ### Single interface
+
 - One Streamlit app (`app.py`) with a unified upload flow and shared XAI pipeline.
 
 ### Modular code
+
 - `src/io_utils.py`: input loading + audio→spectrogram conversion
 - `src/models/*`: model loading (deepfake model + lung demo model)
 - `src/xai/*`: explanation methods (Grad-CAM, LIME, Saliency, Occlusion)
@@ -66,6 +67,7 @@ See `src/config.py`:
 - For **csv**: placeholder entry (easy to extend later)
 
 To extend:
+
 1. Add a new model loader under `src/models/`
 2. Register it in `src/models/registry.py`
 3. Update modality compatibility in `src/config.py`
@@ -75,6 +77,7 @@ To extend:
 ## Models
 
 ### 1) Deepfake audio model (provided)
+
 The original SavedModel is included at:
 
 ```
@@ -84,6 +87,7 @@ assets/saved_model/model
 The app uses it when the input is `.wav`.
 
 ### 2) Lung X-ray model (demo by default)
+
 `src/models/lung_densenet_demo.py` builds a DenseNet121 backbone (ImageNet weights) with a 2-class head:
 
 - Classes: `benign`, `malignant`
@@ -152,5 +156,3 @@ Declare the following in your final submission (edit to match your team’s real
 
 - **Tools/models used:** ChatGPT (OpenAI)
 - **Purpose:** repository refactoring, integration design, UI implementation (Streamlit), and documentation drafting
-
-
